@@ -1,0 +1,35 @@
+#ex1
+import math
+a = float(input())
+print(math.radians(a))
+
+
+
+#ex2
+import math
+print('Height:')
+h = float(input())
+print('Base, first value:')
+a = float(input())
+print('Base, second value:')
+b = float(input())
+print(h * (a+b) * 0.5)
+
+
+
+#ex3
+import math
+print('Input number of sides:')
+a = int(input())
+print('Input the length of a side:')
+b = float(input())
+ap = b / (2 * math.tanh(180/a))
+print((a*b*ap)/2)
+
+
+
+#ex4
+import math
+a = float(input())
+b = float(input())
+print(a*b)
