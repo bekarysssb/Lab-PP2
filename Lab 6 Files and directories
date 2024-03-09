@@ -1,0 +1,95 @@
+#ex1
+import os
+path = input()
+os.chdir(path)
+print(os.listdir())
+#C:\Users\user\Desktop\ㅤ\study\coding\uni python\a.py
+
+
+
+#ex2
+import os
+def check_path(Path):
+    if os.path.exists(Path):
+        print("exists")
+    else:
+        print("Doesnt exist")
+    if os.access(Path, os.R_OK):
+        print("readable")
+    else:
+        print("not readable")
+    if os.access(Path, os.W_OK):
+        print("writable")
+    else:
+        print("unwritable")
+    if os.access(Path, os.X_OK):
+        print("executable")
+    else:
+        print("not executable")
+Path = input()
+check_path(Path)
+#C:\Users\user\Desktop\ㅤ\study\coding\uni python\a.py
+
+
+
+#ex3
+import os
+Path = input()
+if os.path.exists(Path):
+    print(os.path.basename(Path))
+    print(os.path.dirname(Path))
+else:
+    print("doesnt exits")
+#C:\Users\user\Desktop\ㅤ\study\coding\uni python\a.py
+
+
+
+#ex4
+file = open("example.txt", "r")
+count = 0
+for line in file:
+    count += 1
+print("Number of lines:", count)
+file.close()
+
+
+
+#ex5
+file = open("list.txt", "w")
+file.write(str([i for i in input().split()]))
+file.close()
+file = open("list.txt", "r")
+print(file.read())
+
+
+
+#ex6
+let = ord('A')
+for i in range(1, 27):
+    file = open(f"{chr(let)}.txt", "x")
+    let += 1
+    file.close()
+
+
+
+#ex7
+file1 = open("doc1.txt", "r")
+file2 = open("doc2.txt", "w")
+info = file1.read()
+file2.write(info)
+file1.close()
+file2.close()
+file2 = open("doc2.txt", "r")
+print(file2.read())
+file2.close()
+
+
+
+#ex8
+import os
+ Path = input()
+ if os.path.exists(Path):
+    os.remove(Path)
+    print("removed")
+ else:
+    print("Path doesnt exists")
